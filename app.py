@@ -10,6 +10,8 @@ SPOONACULAR_API_KEY = "94ebf2701fbe442da18dcd4857d9a308"
 def index():
     """渲染主页"""
     return render_template('index.html')
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)  # Waitress 会覆盖这个端口
 
 @app.route('/get_recipes', methods=['POST'])
 def get_recipes():
